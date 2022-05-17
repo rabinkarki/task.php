@@ -1,21 +1,25 @@
 <?php
-$students=["name" => "rabin", "email" => "rabin.karki@hazesoft.co", "phone" => "9815349260", "class" => "higher", "course" => "bachelor" ];
+$students=[["name" => "rabin", "email" => "rabin.karki@hazesoft.co", "phone" => "9815349260", "class" => "higher", "course" => "bachelor" ],
+["name" => "pawan", "email" => "rabinkarki@gmail.com", "phone" => "98826377232", "class" => "lower", "course" => "science" ] ];
 
-$email="rabinkarki-gmail.com";
-for($i=0;$i<10;$i++){
-    if ($email=="rabinkarki@gmail.com"){
+
+    
+    function passarray(){
+        global $students;
+        for($i=0;$i<10;$i++){
+            
+    if ( $students[1]["email"]=="rabinkarkigmail.com"){
         echo "email is valid<br>";}
         else{
             echo "email is invalid <br>";
             break;
-        }
-    }
+        }}
     
-    function passarray(){
-        $students=["name" => "rabin", "email" => "rabin.karki@hazesoft.co", "phone" => "9815349260", "class" => "higher", "course" => "bachelor" ];
-    if ($students["email"]=="rabin.karki@hazesoft.co"){
+        
+       
+    if($students[0]["email"]=="rabin.karki@hazesoft.co"){
         echo "<pre>";
-        print_r($students);
+        print_r($students[0]);
         echo "</pre>";
 
     }
@@ -24,5 +28,4 @@ for($i=0;$i<10;$i++){
         }
     }
     passarray();
-
 ?>
